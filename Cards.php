@@ -1,6 +1,6 @@
 <?php
 
-
+echo "hi";
 
 ?>
 
@@ -12,8 +12,6 @@
         <title> Silverjack </title>
     </head>
     <body>
-        
-        
         
         
     </body>
