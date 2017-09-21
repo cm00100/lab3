@@ -17,10 +17,7 @@ function getCards($user){
     while($total < 35){
         $card = rand(1, 13);
         $suite = rand(1, 4);
-        if($card_numbers[($card * $suite) - 1] == 0){
-            continue;
-        }
-        else{
+        if($card_numbers[($card * $suite) - 1] != 0){
             $card_numbers[($card * $suite) - 1] = 0;
             $total += $card;
             echo "<img id='$card' src='img/cards/$suite/$card.png' alt='$card' title='' width='70' />";
