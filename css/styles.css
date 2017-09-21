@@ -18,9 +18,9 @@ header
     border-radius: 25px;
     border: 2px solid;
     padding: 20px; 
-    width: 50%;
+    width: 80%;
     height: 500px;
-    text-align: center;
+    text-align: left;
     margin: 0 auto;
     /*
     border-style:solid;
@@ -28,4 +28,9 @@ header
     text-align: center;
     margin: 0 auto;
     */
+}
+#users{
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
 }

@@ -1,15 +1,33 @@
 <?php
-function print_numbers(){
     $card_numbers = range(1, 52);
-    foreach($card_numbers as $card){
-        echo $card;
+function displayCards(){
+    $names = array("Chris", "Cynthia", "Nolan", "Raeleen");
+    $users = array("Chris", "Cynthia", "Nolan", "Raeleen");
+    $users = array_fill_keys($users, 0);
+    foreach($names as $player){
+        $users[$player] = getCards($player);
     }
 }
 
-function displayCards(){
-    $suite=rand(1,4);
-    $card=rand(1,13);
-    echo "<img id='$card' src='../img/cards/$suite/$card.png' alt='$card' title='". ucfirst($card) . "' width='70' />";
+function getCards($user){
+    global $card_numbers;
+    $lowercase = strtolower($user);
+    echo "<img id='users' src='img/$lowercase.jpg' title='$user' alt='$user'/>";
+    $total = 0;
+    while($total < 35){
+        $card = rand(1, 13);
+        $suite = rand(1, 4);
+        if($card_numbers[($card * $suite) - 1] == 0){
+            continue;
+        }
+        else{
+            $card_numbers[($card * $suite) - 1] = 0;
+            $total += $card;
+            echo "<img id='$card' src='img/cards/$suite/$card.png' alt='$card' title='' width='70' />";
+        }
+    }
+    echo "<span id='score'>Score: $total</span>";
+    echo "<br>";
+    return $total;
 }
-displayCards();
 ?>

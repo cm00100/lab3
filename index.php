@@ -19,7 +19,7 @@ include 'inc/functions.php';
         
         <div id="mainContent">
                 <?php
-                print_numbers();
+                displayCards();
                 ?>
             
         </div>
