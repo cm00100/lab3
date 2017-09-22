@@ -8,7 +8,7 @@ header
     
     font-size:3.5em;
     background-color: DarkGray;
-    width:50%;
+    width:auto;
     margin: 0 auto;
     color:black;
 }
@@ -19,9 +19,11 @@ header
     border: 2px solid;
     padding: 20px; 
     width: 80%;
-    height: 500px;
+    height: auto;
     text-align: left;
     margin: 0 auto;
+     font-family: 'Lobster', cursive;
+     font-size: 1.8em;
     /*
     border-style:solid;
     width:50%;
@@ -33,6 +35,14 @@ header
     width: 120px;
     height: 120px;
     border-radius: 10px;
+    margin:auto;
+   
+}
+#cards{
+    padding-left: 20px;
+    float: inherit;
+    width: 100px;
+    height: 120px;
 }
 #userinfo{
     display: inline-block;
