@@ -1,6 +1,6 @@
 We need a php function to generate the overall score for the player and find out who won. - Cynthia 
 Need some extra CSS to make the page look a little better. -Cynthia
-Need a PHP function to figure out the time elapsed on the page.  -Raeleen 
+Need a PHP function to figure out the time elapsed on the page.  -Raeleen  //how many times the game has been played, average time and overall elapsed time.
 
 
 I'm not sure of all requirements, but I know those things need to be done.
