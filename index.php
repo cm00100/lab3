@@ -50,6 +50,14 @@ global $start;
                 <?php
                 displayCards();
                 ?>
+                
+                
+                
+           
+                <form>
+                    <input type='submit' value='Play Again'/>
+                </form>
+          
             
         </div>
         

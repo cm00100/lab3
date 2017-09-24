@@ -48,3 +48,26 @@ header
     display: inline-block;
 }
 
+input[type=submit] {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 35px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #009933;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+
+input[type=submit]:active 
+{
+  background-color: #336600;
+  box-shadow: 0 5px #333232;
+  transform: translateY(4px);
+
+}
