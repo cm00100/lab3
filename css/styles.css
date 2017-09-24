@@ -48,12 +48,18 @@ header
     display: inline-block;
 }
 
+
+#playButton
+{
+    padding: 35px 10px 10px 35px; 
+    text-align: center;
+}
+
 input[type=submit] {
     display: inline-block;
     padding: 15px 25px;
     font-size: 35px;
     cursor: pointer;
-    text-align: center;
     text-decoration: none;
     outline: none;
     color: #fff;

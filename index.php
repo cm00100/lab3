@@ -53,10 +53,11 @@ global $start;
                 
                 
                 
-           
-                <form>
-                    <input type='submit' value='Play Again'/>
-                </form>
+               <div id="playButton">
+                    <form>
+                        <input type='submit' value='Play Again'/>
+                    </form>
+                </div>
           
             
         </div>
