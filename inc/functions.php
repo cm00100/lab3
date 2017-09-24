@@ -1,11 +1,7 @@
 <?php
 
-$start =microtime(true);
-for($i=0;$i<1000000;$i++)
-{
-    $j=rand(1,3000)*rand(1,2000);
-}
 
+     
     $card_numbers = range(1, 52); //array of cards
 function displayCards(){
     $names = array("Chris", "Cynthia", "Nolan", "Raeleen"); //array of usernames
@@ -39,7 +35,7 @@ function getCards($user){
     return $total;
 }
 
-$totalTime=microtime(true)-$start;
-echo $totalTime . "secs";
 
 ?>
+
+
