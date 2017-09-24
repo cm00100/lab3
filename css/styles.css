@@ -48,7 +48,7 @@ header
     display: inline-block;
 }
 
-#winnerInfo
+#winnerInfo, #winnerInfo1
 {
     color:#009900;
     font-size: 40px;

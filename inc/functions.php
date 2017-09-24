@@ -4,6 +4,7 @@
      
     $card_numbers = range(1, 52); //array of cards
 function displayCards(){
+    $flag=false;
     $names = array("Chris", "Cynthia", "Nolan", "Raeleen"); //array of usernames
     $users = array("Chris", "Cynthia", "Nolan", "Raeleen");  //key value pairs of names and scores
     $users = array_fill_keys($users, 0); //give each user initial value of 0
@@ -18,6 +19,11 @@ function displayCards(){
     // This is where winner score calculates and displays. 
     
     while ($getWinner = current($users)) {
+        
+        if($getWinner<42 && $getWinner>$temp){
+            $temp=$getWinner;
+            $tempkey=key($users);
+        }
         if ($getWinner == 42) {
            
            
@@ -35,23 +41,29 @@ function displayCards(){
            echo "<div id='winnerInfo'>";    
            echo $winner . " ". $points ." wins points!!";
            echo "</div>";
+           $flag=true;
+           break;
            
         }
     
- 
-        else if($getwinner > 42)
-        {
-          echo "Nobody wins!";   
-        }
-          
-    
         next($users);
-    
-    
-    
-    
 }
-   
+    if($flag==false){
+    $countWinners = 0;
+    $countWinners = $countWinners + $temp;
+    $sumOfCountWinners += $countWinners;
+           
+           
+    $winner = $tempkey;
+          
+    $sum = array_sum($users);
+           
+    $points = $sum - $sumOfCountWinners;
+    
+    echo "<div id='winnerInfo1'>";    
+    echo $winner . " ". $points ." wins points!!";
+    echo "</div>";
+    }
     
 }
 
