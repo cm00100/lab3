@@ -34,6 +34,7 @@ global $start;
         <meta charset="utf-8" />
         <title>SilverJack</title>
         <link href="css/styles.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
         
         
         

@@ -18,6 +18,7 @@ function getCards($user){
     global $card_numbers; //use global array
     $lowercase = strtolower($user); //make username lowercase for img path
     echo "<div id='userinfo'><span id='name'>$user</span>"; //username
+    echo "<br/>";
     echo "<img id='userpicture' src='img/$lowercase.jpg' title='$user' alt='$user'/></div>"; //user image
     $total = 0; //user score
     //get user new card until score greater than 35
@@ -27,7 +28,7 @@ function getCards($user){
         if($card_numbers[($card * $suite) - 1] != 0){
             $card_numbers[($card * $suite) - 1] = 0;
             $total += $card;
-            echo "<img id='$card' src='img/cards/$suite/$card.png' alt='$card' title='' width='70' />"; //display card
+            echo "<img id='cards' src='img/cards/$suite/$card.png' alt='$card' title='' />"; //display card
         }
     }
     echo "<span id='score'>Score: $total</span>";
