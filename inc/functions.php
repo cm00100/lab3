@@ -9,13 +9,55 @@ function displayCards(){
     $users = array_fill_keys($users, 0); //give each user initial value of 0
     shuffle($names); //make user order random
     //get cards for each user and set their score
+    
     foreach($names as $player){ 
         $users[$player] = getCards($player);
     }
+    
+    
+    // This is where winner score calculates and displays. 
+    
+    while ($getWinner = current($users)) {
+        if ($getWinner == 42) {
+           
+           
+           $countWinners = 0;
+           $countWinners = $countWinners + $getWinner;
+           $sumOfCountWinners += $countWinners;
+           
+           
+           $winner = key($users);
+          
+           $sum = array_sum($users);
+           
+           $points = $sum - $sumOfCountWinners;
+    
+           echo "<div id='winnerInfo'>";    
+           echo $winner . " ". $points ." wins points!!";
+           echo "</div>";
+           
+        }
+    
+ 
+        else if($getwinner > 42)
+        {
+          echo "Nobody wins!";   
+        }
+          
+    
+        next($users);
+    
+    
+    
+    
+}
+   
+    
 }
 
 function getCards($user){
     global $card_numbers; //use global array
+    
     $lowercase = strtolower($user); //make username lowercase for img path
     echo "<div id='userinfo'><span id='name'>$user</span>"; //username
     echo "<br/>";
@@ -30,11 +72,15 @@ function getCards($user){
             $total += $card;
             echo "<img id='cards' src='img/cards/$suite/$card.png' alt='$card' title='' />"; //display card
         }
+        
+        
     }
     echo "<span id='score'>Score: $total</span>";
     echo "<br>";
+       
     return $total;
 }
+
 
 
 ?>

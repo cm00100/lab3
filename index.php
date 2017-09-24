@@ -1,6 +1,9 @@
 <?php
 include 'inc/functions.php';
 
+
+
+
 $start = microtime(true);
 session_start();
 
@@ -27,6 +30,8 @@ global $start;
      $_SESSION['matchCount']++;
 } //elapsedTime
 
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -34,9 +39,7 @@ global $start;
         <meta charset="utf-8" />
         <title>SilverJack</title>
         <link href="css/styles.css" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-        
-        
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">  
         
     </head>
     <body>
@@ -49,9 +52,8 @@ global $start;
         <div id="mainContent">
                 <?php
                 displayCards();
+              
                 ?>
-                
-                
                 
                <div id="playButton">
                     <form>
@@ -62,7 +64,7 @@ global $start;
             
         </div>
         
-       <?=elapsedTime()?>
+       <?=elapsedTime()?> 
         
     </body>
     

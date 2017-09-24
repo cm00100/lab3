@@ -39,13 +39,22 @@ header
    
 }
 #cards{
-    padding-left: 20px;
+    padding-left: 5px;
     float: inherit;
-    width: 100px;
+    width: 90px;
     height: 120px;
 }
 #userinfo{
     display: inline-block;
+}
+
+#winnerInfo
+{
+    color:#009900;
+    font-size: 40px;
+    text-align: center;
+    padding: 35px 10px 10px 35px; 
+
 }
 
 
