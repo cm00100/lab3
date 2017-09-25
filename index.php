@@ -28,7 +28,7 @@ global $start;
      echo "Average time: " . ( $_SESSION['totalElapsedTime']  / $_SESSION['matchCount']);
      
      $_SESSION['matchCount']++;
-} //elapsedTime
+} //elapsedTime here
 
 
 
